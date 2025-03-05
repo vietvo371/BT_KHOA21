@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('hoc_ky');
             $table->string('ten_mon_hoc');
             $table->string('nam_hoc');
+            $table->string('ten_mon_hoc');
             $table->timestamps();
         });
     }

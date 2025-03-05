@@ -12,13 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sinh_viens', function (Blueprint $table) {
-            $table->integer('ma_sinh_vien')->primary();
+            $table->id();
+            $table->integer('ma_sinh_vien')->unique();
             $table->string('ho_ten');
             $table->date('ngay_sinh');
             $table->integer('gioi_tinh')->comment('0: nữ, 1: nam', '2: khác');
             $table->string('dia_chi');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('so_dien_thoai');
+            $table->string('password');
             $table->timestamps();
         });
     }

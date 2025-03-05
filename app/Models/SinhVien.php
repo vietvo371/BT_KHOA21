@@ -15,5 +15,7 @@ class SinhVien extends Model
         'dia_chi',
         'so_dien_thoai',
         'email',
+        'password',
+
     ];
 }

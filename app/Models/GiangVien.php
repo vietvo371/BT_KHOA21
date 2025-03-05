@@ -17,6 +17,7 @@ class GiangVien extends Model
         'so_dien_thoai',
         'hoc_vi',
         'ma_khoa',
-        'ngay_vao_lam'
+        'ngay_vao_lam',
+        'password'
     ];
 }
