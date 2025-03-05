@@ -22,7 +22,8 @@ class DangKySeeder extends Seeder
                 'ma_mon_hoc' => 205,
                 'ngay_dang_ky' => '2023-01-10',
                 'hoc_ky' => 'HK1',
-                'nam_hoc' => '2023-2024'
+                'nam_hoc' => '2023-2024',
+                'ten_mon_hoc' => 'Trí tuệ nhân tạo'
             ],
             [
                 'ma_dang_ky' => 2,
@@ -30,7 +31,8 @@ class DangKySeeder extends Seeder
                 'ma_mon_hoc' => 206,
                 'ngay_dang_ky' => '2023-06-15',
                 'hoc_ky' => 'HK2',
-                'nam_hoc' => '2023-2024'
+                'nam_hoc' => '2023-2024',
+                'ten_mon_hoc' => 'Phát triển phần mềm'
             ],
             [
                 'ma_dang_ky' => 3,
@@ -38,7 +40,8 @@ class DangKySeeder extends Seeder
                 'ma_mon_hoc' => 203,
                 'ngay_dang_ky' => '2023-09-20',
                 'hoc_ky' => 'HK1',
-                'nam_hoc' => '2023-2024'
+                'nam_hoc' => '2023-2024',
+                'ten_mon_hoc' => 'Cơ sở dữ liệu'
             ],
             [
                 'ma_dang_ky' => 4,
@@ -46,7 +49,8 @@ class DangKySeeder extends Seeder
                 'ma_mon_hoc' => 204,
                 'ngay_dang_ky' => '2024-03-12',
                 'hoc_ky' => 'HK2',
-                'nam_hoc' => '2023-2024'
+                'nam_hoc' => '2023-2024',
+                'ten_mon_hoc' => 'Mạng máy tính'
             ],
             [
                 'ma_dang_ky' => 5,
@@ -54,7 +58,8 @@ class DangKySeeder extends Seeder
                 'ma_mon_hoc' => 203,
                 'ngay_dang_ky' => '2023-05-22',
                 'hoc_ky' => 'HK1',
-                'nam_hoc' => '2023-2024'
+                'nam_hoc' => '2023-2024',
+                'ten_mon_hoc' => 'Cơ sở dữ liệu'
             ],
             [
                 'ma_dang_ky' => 6,
@@ -62,7 +67,8 @@ class DangKySeeder extends Seeder
                 'ma_mon_hoc' => 206,
                 'ngay_dang_ky' => '2023-06-18',
                 'hoc_ky' => 'HK2',
-                'nam_hoc' => '2023-2024'
+                'nam_hoc' => '2023-2024',
+                'ten_mon_hoc' => 'Phát triển phần mềm'
             ],
             [
                 'ma_dang_ky' => 7,
@@ -70,7 +76,8 @@ class DangKySeeder extends Seeder
                 'ma_mon_hoc' => 206,
                 'ngay_dang_ky' => '2023-06-20',
                 'hoc_ky' => 'HK2',
-                'nam_hoc' => '2023-2024'
+                'nam_hoc' => '2023-2024',
+                'ten_mon_hoc' => 'Phát triển phần mềm'
             ],
             [
                 'ma_dang_ky' => 8,
@@ -78,7 +85,8 @@ class DangKySeeder extends Seeder
                 'ma_mon_hoc' => 206,
                 'ngay_dang_ky' => '2023-06-22',
                 'hoc_ky' => 'HK2',
-                'nam_hoc' => '2023-2024'
+                'nam_hoc' => '2023-2024',
+                'ten_mon_hoc' => 'Phát triển phần mềm'
             ],
         ]);
     }
