@@ -17,7 +17,6 @@ return new class extends Migration
             $table->integer('ma_mon_hoc');
             $table->date('ngay_dang_ky');
             $table->string('hoc_ky');
-            $table->string('ten_mon_hoc');
             $table->string('nam_hoc');
             $table->string('ten_mon_hoc');
             $table->timestamps();

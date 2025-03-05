@@ -23,7 +23,8 @@ class SinhVienSeeder extends Seeder
                 'gioi_tinh' => 0, // Nam
                 'dia_chi' => '123 Đường ABC, Hà Nội',
                 'email' => 'nguyenvana@example.com',
-                'so_dien_thoai' => '0123456789'
+                'so_dien_thoai' => '0123456789',
+                'password' => '1234567890'
             ],
             [
                 'ma_sinh_vien' => 1002,
@@ -32,7 +33,8 @@ class SinhVienSeeder extends Seeder
                 'gioi_tinh' => 1, // Nữ
                 'dia_chi' => '456 Đường XYZ, TP.HCM',
                 'email' => 'tranthib@example.com',
-                'so_dien_thoai' => '0987654321'
+                'so_dien_thoai' => '0987654321',
+                'password' => '1234567890'
             ],
             [
                 'ma_sinh_vien' => 1003,
@@ -41,7 +43,8 @@ class SinhVienSeeder extends Seeder
                 'gioi_tinh' => 2, // Khác
                 'dia_chi' => '789 Đường MNP, Đà Nẵng',
                 'email' => 'lethanhc@example.com',
-                'so_dien_thoai' => '0369852147'
+                'so_dien_thoai' => '0369852147',
+                'password' => '1234567890'
             ],
             [
                 'ma_sinh_vien' => 1004,
@@ -50,7 +53,8 @@ class SinhVienSeeder extends Seeder
                 'gioi_tinh' => 0, // Nam
                 'dia_chi' => '101 Đường QRS, Hải Phòng',
                 'email' => 'phamvand@example.com',
-                'so_dien_thoai' => '0912345678'
+                'so_dien_thoai' => '0912345678',
+                'password' => '1234567890'
             ],
             [
                 'ma_sinh_vien' => 1005,
@@ -59,7 +63,8 @@ class SinhVienSeeder extends Seeder
                 'gioi_tinh' => 1, // Nữ
                 'dia_chi' => '202 Đường UVW, Cần Thơ',
                 'email' => 'hoangthie@example.com',
-                'so_dien_thoai' => '0923456789'
+                'so_dien_thoai' => '0923456789',
+                'password' => '1234567890'
             ],
             [
                 'ma_sinh_vien' => 1006,
@@ -68,7 +73,8 @@ class SinhVienSeeder extends Seeder
                 'gioi_tinh' => 0, // Nam
                 'dia_chi' => '303 Đường GHI, Nha Trang',
                 'email' => 'dominhf@example.com',
-                'so_dien_thoai' => '0934567890'
+                'so_dien_thoai' => '0934567890',
+                'password' => '1234567890'
             ],
             [
                 'ma_sinh_vien' => 1007,
@@ -77,7 +83,8 @@ class SinhVienSeeder extends Seeder
                 'gioi_tinh' => 2, // Khác
                 'dia_chi' => '404 Đường JKL, Huế',
                 'email' => 'nguyenbaog@example.com',
-                'so_dien_thoai' => '0945678901'
+                'so_dien_thoai' => '0945678901',
+                'password' => '1234567890'
             ],
             [
                 'ma_sinh_vien' => 1008,
@@ -86,7 +93,8 @@ class SinhVienSeeder extends Seeder
                 'gioi_tinh' => 0, // Nam
                 'dia_chi' => '505 Đường MNO, Bình Dương',
                 'email' => 'tranminhh@example.com',
-                'so_dien_thoai' => '0956789012'
+                'so_dien_thoai' => '0956789012',
+                'password' => '1234567890'
             ]
         ]);
     }

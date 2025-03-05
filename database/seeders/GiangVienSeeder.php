@@ -28,6 +28,7 @@ class GiangVienSeeder extends Seeder
                 'hoc_vi'                => 'Tiến sĩ',
                 'ma_khoa'               => 101,
                 'ngay_vao_lam'          => '2010-09-01',
+                'password'              => '1234567890'
             ],
             [
                 'ma_giang_vien'         => 20378,
@@ -40,7 +41,8 @@ class GiangVienSeeder extends Seeder
                 'hoc_vi'                => 'Thạc sĩ',
                 'ma_khoa'               => 102,
                 'ngay_vao_lam'          => '2012-03-15',
-            ],
+                'password'              => '1234567890'
+                ],
             [
                 'ma_giang_vien'         => 30591,
                 'ho_ten'                => 'Trần Văn C',
@@ -52,7 +54,8 @@ class GiangVienSeeder extends Seeder
                 'hoc_vi'                => 'Giáo sư',
                 'ma_khoa'               => 101,
                 'ngay_vao_lam'          => '2008-01-04',
-            ],
+                'password'              => '1234567890'
+                ],
             [
                 'ma_giang_vien'         => 40762,
                 'ho_ten'                => 'Lê Thị D',
@@ -64,6 +67,7 @@ class GiangVienSeeder extends Seeder
                 'hoc_vi'                => 'Thạc sĩ',
                 'ma_khoa'               => 103,
                 'ngay_vao_lam'          => '2015-08-20',
+                'password'              => '1234567890'
             ],
             [
                 'ma_giang_vien'         => 50834,
@@ -76,6 +80,7 @@ class GiangVienSeeder extends Seeder
                 'hoc_vi'                => 'Phó Giáo sư',
                 'ma_khoa'               => 102,
                 'ngay_vao_lam'          => '2011-02-04',
+                'password'              => '1234567890'
             ],
         ]);
     }
