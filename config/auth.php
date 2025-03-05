@@ -40,6 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'api' => [
+            'driver' => 'session',
+            'provider' => 'sinhvien',
+        ],
+        'sinhvien' => [
+            'driver' => 'session',
+            'provider' => 'sinhvien',
+        ],
     ],
 
     /*
@@ -63,6 +71,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+        'sinhvien' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\SinhVien::class,
         ],
 
         // 'users' => [
