@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('hoc_ky');
             $table->string('nam_hoc');
             $table->string('ten_mon_hoc');
+            $table->integer('xep_loai')->default(0)->comment('0: chưa xếp loại, 1: A, 2: B, 3: C, 4: D, 5: F');
             $table->timestamps();
         });
     }

@@ -15,5 +15,6 @@ class DangKy extends Model
         'hoc_ky',
         'nam_hoc',
         'ten_mon_hoc',
+        'xep_loai'
     ];
 }
