@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GiangVienController;
+use App\Http\Controllers\NhanVienController;
 use App\Http\Controllers\SinhVienController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -17,3 +18,8 @@ Route::post('/sinh-vien/login', [SinhVienController::class, 'login']);
 
 // API GIẢNG VIÊN
 Route::post('/giang-vien/login', [GiangVienController::class, 'login']);
+
+
+
+// API NHÂN VIÊN
+Route::post('/nhan-vien/login', [NhanVienController::class, 'login']);

@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             SinhVienLopHocSeeder::class,
             DangKySeeder::class,
             DiemSoSeeder::class,
+            NhanVienSeeder::class,
         ]);
     }
 }
