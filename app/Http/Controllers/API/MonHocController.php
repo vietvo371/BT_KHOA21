@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\MonHoc;
-use App\Models\DiemSo;
 use App\Models\DangKy;
+use App\Models\DiemSo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -15,21 +15,13 @@ class MonHocController extends Controller
 {
     public function getDiem(Request $request)
     {
-        $sinhVien = Auth::guard('sanctum')->user();
+        $sinhVien = auth()->user();
 
-        $diem = DB::table('diem_sos')
-            ->join('dang_kys', 'dang_kys.ma_dang_ky', '=', 'diem_sos.ma_dang_ky')
-            ->join('sinh_viens', 'sinh_viens.ma_sinh_vien', '=', 'dang_kys.ma_sinh_vien')
-            ->join('mon_hocs', 'mon_hocs.ma_mon_hoc', '=', 'dang_kys.ma_mon_hoc')
-            ->where('sinh_viens.ma_sinh_vien', $sinhVien->ma_sinh_vien)
-            ->where('dang_kys.ma_mon_hoc', $request->ma_mon_hoc)
-            ->select([
-                'mon_hocs.ten_mon_hoc',
-                'diem_sos.diem_giua_ky',
-                'diem_sos.diem_cuoi_ky',
-                'diem_sos.diem_tong_ket'
-            ])
-            ->get();
+        // Sử dụng relationship
+        $diem = $sinhVien->dangKys()
+            ->with(['monHoc', 'diemSo'])
+            ->where('ma_mon_hoc', $request->ma_mon_hoc)
+            ->first();
 
         return response()->json([
             'status' => true,
@@ -39,15 +31,13 @@ class MonHocController extends Controller
 
     public function dangKyMonHoc(Request $request)
     {
-        $sinhVien = Auth::guard('sanctum')->user();
+        $sinhVien = auth()->user();
         $maMonHoc = $request->ma_mon_hoc;
 
-        // Kiểm tra môn học đã đăng ký chưa
-        $daHoc = DB::table('sinh_vien_lop_hocs')
-            ->join('lop_hocs', 'lop_hocs.ma_lop', '=', 'sinh_vien_lop_hocs.ma_lop')
-            ->where('sinh_vien_lop_hocs.ma_sinh_vien', $sinhVien->ma_sinh_vien)
-            ->where('lop_hocs.ma_mon_hoc', $maMonHoc)
-            ->first();
+        // Kiểm tra đã đăng ký chưa sử dụng relationship
+        $daHoc = $sinhVien->lopHocs()
+            ->where('ma_mon_hoc', $maMonHoc)
+            ->exists();
 
         if ($daHoc) {
             return response()->json([
@@ -55,7 +45,9 @@ class MonHocController extends Controller
                 'message' => 'Môn học đã được đăng ký'
             ], 400);
         }
-        $monHoc = MonHoc::where('ma_mon_hoc', $maMonHoc)->first();
+
+        // Tìm môn học
+        $monHoc = MonHoc::find($maMonHoc);
         if (!$monHoc) {
             return response()->json([
                 'status' => false,
@@ -63,9 +55,9 @@ class MonHocController extends Controller
             ], 404);
         }
 
-        $dangKy = DangKy::create([
+        // Tạo đăng ký mới sử dụng relationship
+        $dangKy = $sinhVien->dangKys()->create([
             'ma_dang_ky' => random_int(10000000, 99999999),
-            'ma_sinh_vien' => $sinhVien->ma_sinh_vien,
             'ma_mon_hoc' => $maMonHoc,
             'ngay_dang_ky' => now(),
             'hoc_ky' => $request->hoc_ky,
@@ -73,10 +65,10 @@ class MonHocController extends Controller
             'ten_mon_hoc' => $monHoc->ten_mon_hoc,
         ]);
 
-        // Thêm vào bảng đăng ký
         return response()->json([
             'status' => true,
-            'message' => 'Đăng ký thành công'
+            'message' => 'Đăng ký thành công',
+            'data' => $dangKy->load('monHoc') // Eager loading
         ]);
     }
 

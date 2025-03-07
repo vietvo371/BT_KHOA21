@@ -11,6 +11,23 @@ use Carbon\Carbon;
 
 class SinhVienController extends Controller
 {
+
+
+    public function getTest()
+    {
+        // Cách 1: Lấy một sinh viên cụ thể
+        $sinhVien = SinhVien::first();
+        $test = $sinhVien->lopHocs;
+
+        // Hoặc Cách 2: Lấy tất cả sinh viên với relationship
+        // $sinhVien = SinhVien::with('lopHocs')->get();
+
+        return response()->json([
+            'status' => true,
+            'data' => $test  // với cách 1
+            // 'data' => $sinhVien  // với cách 2
+        ]);
+    }
     public function getProfile()
     {
         $sinhVien = Auth::guard('sanctum')->user();

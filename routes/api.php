@@ -25,3 +25,6 @@ Route::post('/dangky-lophoc', [MonHocController::class, 'dangKyMonHoc'])->middle
 // Đăng ký tín chỉ
 Route::post('/dangky-tinchi', [MonHocController::class, 'dangKyTinChi'])->middleware('sinhvien');
 Route::post('/profile', [SinhVienController::class, 'getProfile'])->middleware('sinhvien');
+
+
+Route::get('/test', [SinhVienController::class, 'getTest']);
